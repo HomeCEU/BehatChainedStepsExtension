@@ -1,4 +1,7 @@
 BehatChainedStepsExtension
 ==========================
 
-An Extension for Behat that improves Chained Steps
+This Behat Extension does two things:
+
+* Trigger BeforeStep and AfterStep hooks when using Chained Steps
+* Display pass/fail output in console for Chained Steps
