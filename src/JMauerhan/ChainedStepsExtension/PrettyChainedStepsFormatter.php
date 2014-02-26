@@ -11,6 +11,7 @@ class PrettyChainedStepsFormatter extends PrettyFormatter
 
     var $chainedSteps = [];
     var $inChain = false;
+    var $indent = '  ';
 
     /**
      * @inheritdoc
@@ -88,6 +89,7 @@ class PrettyChainedStepsFormatter extends PrettyFormatter
         {
             foreach ($this->delayedStepEvents as $event)
             {
+                $this->write($this->indent);
                 $this->printStep(
                         $event->getStep(), $event->getResult(), $event->getDefinition(), $event->getSnippet(), $event->getException()
                 );
