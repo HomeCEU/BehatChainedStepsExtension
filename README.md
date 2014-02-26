@@ -20,7 +20,11 @@ default:
     JMauerhan\ChainedStepsExtension\Extension:
       trigger_hooks: true
       show_chained_steps: true
+  formatter:
+    name: 'JMauerhan\ChainedStepsExtension\PrettyChainedStepsFormatter'
 ```
+
+
 
 ## Options/Defaults
 ```
