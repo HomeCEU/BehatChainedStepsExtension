@@ -13,6 +13,6 @@
         }
     ],
     "autoload": {
-        "psr-0": {"Behat\\ChainedStepsExtension": "src/"}
+        "psr-0": {"JMauerhan\\ChainedStepsExtension": "src/"}
     }
 }
