@@ -1,5 +1,5 @@
 {
-    "name": "BehatChainedStepsExtension",
+    "name": "Behat\\ChainedStepsExtension",
     "type": "behat-extension",
     "description": "Chained Steps extension for Behat",
     "keywords": ["symfony", "framework", "bdd"],
@@ -16,6 +16,6 @@
         "behat/behat": "v2.5.0"
     },
     "autoload": {
-        "psr-0": {"BehatChainedStepsExtension": "src/"}
+        "psr-0": {"Behat\\ChainedStepsExtension": "src/"}
     }
 }
