@@ -1,5 +1,5 @@
 {
-    "name": "behat/chained-steps-extension",
+    "name": "jmauerhan/chained-steps-extension",
     "type": "behat-extension",
     "description": "Chained Steps extension for Behat",
     "keywords": ["behat"],
