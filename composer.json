@@ -2,7 +2,7 @@
     "name": "behat/chained-steps-extension",
     "type": "behat-extension",
     "description": "Chained Steps extension for Behat",
-    "keywords": ["symfony", "framework", "bdd"],
+    "keywords": ["behat"],
     "homepage": "http://behat.org",
     "license": "MIT",
     "authors": [
