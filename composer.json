@@ -1,0 +1,21 @@
+{
+    "name": "BehatChainedStepsExtension",
+    "type": "behat-extension",
+    "description": "Chained Steps extension for Behat",
+    "keywords": ["symfony", "framework", "bdd"],
+    "homepage": "http://behat.org",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jessica Mauerhan",
+            "email": "jessicamauerhan@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "behat/behat": "v2.5.0",
+    },
+    "autoload": {
+        "psr-0": {"BehatChainedStepsExtension": "src/"}
+    }
+}
