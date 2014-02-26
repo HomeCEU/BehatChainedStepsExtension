@@ -1,5 +1,5 @@
 {
-    "name": "Behat/ChainedStepsExtension",
+    "name": "behat/chained-steps-extension",
     "type": "behat-extension",
     "description": "Chained Steps extension for Behat",
     "keywords": ["symfony", "framework", "bdd"],
