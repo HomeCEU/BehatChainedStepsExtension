@@ -34,3 +34,7 @@ tester:
   step:
     class: JMauerhan\ChainedStepsExtension\StepTester
 ```
+
+#### Known Limitations or Quirks
+
+* Chained Steps used within Scenario Outlines will not be printed during the Scenario Outline, but will be printed within the Executed Steps section. (So, the blue part will not be expanded to show chained steps, but the red/green part will.)
