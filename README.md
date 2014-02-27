@@ -37,4 +37,4 @@ tester:
 
 #### Known Limitations or Quirks
 
-* Chained Steps used within Scenario Outlines will not be printed by the formatter. The @BeforeStep and @AfterStep hooks will still be triggered between chained steps. 
+* Chained Steps used within Scenario Outlines will not be printed by the formatter. The @BeforeStep and @AfterStep hooks will still be triggered between chained steps during the Scenario Outline Examples execution.
