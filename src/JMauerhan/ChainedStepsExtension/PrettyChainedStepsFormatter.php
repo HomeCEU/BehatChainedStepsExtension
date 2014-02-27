@@ -63,6 +63,7 @@ class PrettyChainedStepsFormatter extends PrettyFormatter
      */
     public function afterStep(StepEvent $event)
     {
+
         if ($this->inBackground && $this->isBackgroundPrinted)
         {
             return;
@@ -74,10 +75,15 @@ class PrettyChainedStepsFormatter extends PrettyFormatter
             $this->inChain = false;
         }
 
-        if ((!$this->inBackground && $this->inOutlineExample) || $this->inChain)
+        if ((!$this->inBackground && $this->inOutlineExample))
         {
             $this->delayedStepEvents[] = $event;
+            return;
+        }
 
+        if ($this->inChain)
+        {
+            $this->chainedSteps[] = $event;
             return;
         }
 
@@ -85,16 +91,16 @@ class PrettyChainedStepsFormatter extends PrettyFormatter
                 $event->getStep(), $event->getResult(), $event->getDefinition(), $event->getSnippet(), $event->getException()
         );
 
-        if (isset($this->delayedStepEvents) && count($this->delayedStepEvents) && isset($isStepChainParent) && $isStepChainParent)
+        if (isset($this->chainedSteps) && count($this->chainedSteps) && isset($isStepChainParent) && $isStepChainParent)
         {
-            foreach ($this->delayedStepEvents as $event)
+            foreach ($this->chainedSteps as $event)
             {
                 $this->write($this->indent);
                 $this->printStep(
                         $event->getStep(), $event->getResult(), $event->getDefinition(), $event->getSnippet(), $event->getException()
                 );
             }
-            unset($this->delayedStepEvents);
+            $this->chainedSteps = [];
         }
     }
 

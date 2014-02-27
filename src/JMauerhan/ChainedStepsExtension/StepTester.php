@@ -191,7 +191,10 @@ class StepTester implements NodeVisitorInterface
                 {
                     throw $substepEvent->getException();
                 }
-                $this->dispatcher->dispatch('afterStep', $substepEvent);
+                if ($substepEvent->getLogicalParent()->getKeyword() != 'Scenario Outline')
+                {
+                    $this->dispatcher->dispatch('afterStep', $substepEvent);
+                }
             } elseif (is_callable($chainItem))
             {
                 $this->executeStepsChain($step, call_user_func($chainItem));
