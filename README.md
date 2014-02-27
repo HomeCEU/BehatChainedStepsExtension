@@ -37,4 +37,5 @@ tester:
 
 #### Known Limitations or Quirks
 
+* Currently the teigger_hooks and show_chained_steps options do not change when set to false, this is a todo. The extension needed some options to work, so I put these in as placeholders
 * Chained Steps used within Scenario Outlines will not be printed by the formatter. The @BeforeStep and @AfterStep hooks will still be triggered between chained steps during the Scenario Outline Examples execution.
