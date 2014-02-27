@@ -13,7 +13,7 @@ Install using composer:
 ```
 
 # Configuration
-Configure the Extension in behat.yml
+Configure the Extension in behat.yml. You must use the formatter.
 ```
 default:
   extensions:
@@ -37,4 +37,4 @@ tester:
 
 #### Known Limitations or Quirks
 
-* Chained Steps used within Scenario Outlines will not be printed during the Scenario Outline, but will be printed within the Executed Steps section. (So, the blue part will not be expanded to show chained steps, but the red/green part will.)
+* Chained Steps used within Scenario Outlines will not be printed by the formatter. The @BeforeStep and @AfterStep hooks will still be triggered between chained steps. 
